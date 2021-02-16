@@ -1,0 +1,10 @@
+.avatar {
+    box-sizing: border-box;
+}
+.avatar_img{
+  height: 35px;
+  width: 35px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}

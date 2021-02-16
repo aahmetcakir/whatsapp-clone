@@ -1,0 +1,11 @@
+#262d31 -> landing page rengi ve konuşma balonu arka plan rengi
+#131c21 -> grub compu backgroundu
+#323739 -> seçilmiş grup compu rengi
+#056162 -> user konuşma balonu rengi
+#2a2f32 -> grub title rengi
+#0d1418 -> chat background rengi
+#8f9394 -> chat title icon rengi
+#c9cacc -> chat title rengi
+#777a7d -> chat title > users rengi
+#090e11 -> ana background rengi
+size 1400 * 930

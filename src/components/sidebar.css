@@ -1,0 +1,16 @@
+.sidebar{
+    height: 100vh;
+    color: white;
+}
+.sidebar_title{
+    background-color: #2a2f32;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar_title_icons{
+    margin-right: 15px;
+}
+.sidebar_title_icons_icon{
+    color: #8f9394;
+}

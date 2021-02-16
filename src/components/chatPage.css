@@ -1,0 +1,41 @@
+.chatPage {
+  background-color: #2a2f32;
+  height: 93%;
+  color: white;
+}
+.chatPage_chatScreen {
+  background-image: url("https://whatsappbrand.com/wp-content/themes/whatsapp-brc/images/hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #0d1418;
+  height: 100%;
+}
+.chatPage_chatTitle_info {
+  display: flex;
+  align-items: center;
+}
+.chatPage_chatTitle {
+  display: flex;
+  background-color: #2a2f32;
+  justify-content: space-between;
+}
+.chatPage_chatTitle_name {
+  color: #c9cacc;
+}
+.chatPage_chatTitle_name_users {
+  color: #777a7d;
+}
+.chatPage_chatTitle_icons {
+  display: flex;
+  align-items: center;
+}
+.moreIcon {
+  color: #8f9394;
+}
+.searchIcon {
+  color: #8f9394;
+}
+.button {
+  border-radius: 50%;
+  align-items: center;
+}
