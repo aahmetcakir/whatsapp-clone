@@ -4,9 +4,10 @@ import "./sidebar.css";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
-import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
 import SidebarGroup from "./sidebar_group";
 import Notification from "./notification";
+import SearchBar from "./searchBar";
 
 function sidebar() {
   const img =
@@ -16,22 +17,22 @@ function sidebar() {
       <div className="sidebar_title">
         <Avatar src={img} />
         <div className="sidebar_title_icons">
-          <Button>
+          <IconButton>
             <DonutLargeIcon className="sidebar_title_icons_icon" />
-          </Button>
-          <Button>
+          </IconButton>
+          <IconButton>
             <ChatIcon className="sidebar_title_icons_icon" />
-          </Button>
-          <Button>
+          </IconButton>
+          <IconButton>
             <MoreVertIcon className="sidebar_title_icons_icon" />
-          </Button>
+          </IconButton>
         </div>
       </div>
       <div className="sidebar_grubs">
-        <Notification/>
-        these are  groups
-        <SidebarGroup/>
-        </div>
+        <Notification />
+        <SearchBar />
+        <SidebarGroup />
+      </div>
     </div>
   );
 }

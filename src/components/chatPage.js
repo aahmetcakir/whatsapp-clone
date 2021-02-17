@@ -2,7 +2,7 @@ import React from "react";
 import Avatar from "./avatar";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
-import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
 import "./chatPage.css";
 
 function ChatPage({ name }) {
@@ -21,12 +21,12 @@ function ChatPage({ name }) {
           </div>
         </div>
         <div className="chatPage_chatTitle_icons">
-          <Button className="button">
+          <IconButton className="button">
             <SearchIcon className="searchIcon" />
-          </Button>
-          <Button className="button">
+          </IconButton>
+          <IconButton className="button">
             <MoreVertIcon className="moreIcon" />
-          </Button>
+          </IconButton>
         </div>
       </div>
       <div className="chatPage_chatScreen">this is a chat screen</div>
