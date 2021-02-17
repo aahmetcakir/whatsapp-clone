@@ -9,6 +9,14 @@
   background-position: center;
   background-color: #0d1418;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.chatPage_chatScreen_messages {
+  flex: .99;
+}
+.chatPage_chatScreen_sendMessageArea{
+  flex: .01;
 }
 .chatPage_chatTitle_info {
   display: flex;

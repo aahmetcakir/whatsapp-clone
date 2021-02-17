@@ -4,6 +4,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
 import "./chatPage.css";
+import SendMessage from "./sendMessage";
 
 function ChatPage({ name }) {
   const img =
@@ -17,7 +18,7 @@ function ChatPage({ name }) {
             {name} <br />
             <div className="chatPage_chatTitle_name_users">
               Siz, Umutcan, Berkay, Muhammet
-              </div>
+            </div>
           </div>
         </div>
         <div className="chatPage_chatTitle_icons">
@@ -29,7 +30,14 @@ function ChatPage({ name }) {
           </IconButton>
         </div>
       </div>
-      <div className="chatPage_chatScreen">this is a chat screen</div>
+      <div className="chatPage_chatScreen">
+        <div className="chatPage_chatScreen_messages">
+          this is a chat screen
+        </div>
+        <div className="chatPage_chatScreen_sendMessageArea">
+          <SendMessage />
+        </div>
+      </div>
     </div>
   );
 }

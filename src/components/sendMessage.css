@@ -1,0 +1,32 @@
+.sendMessage {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px 10px 14px;
+  background-color: #1e2428;
+  position: relative;
+  top: 8px;
+}
+.sendMessage_icon {
+  color: #828689;
+  cursor: pointer;
+  padding-left: 8px;
+  padding-right: 12px;
+}
+.sendMessage_icon_rotate {
+  color: #828689;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+.sendMessage_input {
+  background-color: #33383b;
+  width: 100%;
+  margin-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  text-indent: 15px;
+  font-size: 14px;
+  color: #dde2e6;
+}

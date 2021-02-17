@@ -4,7 +4,7 @@
 .sidebar_group_scroll {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 900px;
+  height: 720px;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -14,8 +14,8 @@
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #8f9394;
-  border-radius: 10px;
+  background: #394045;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555c5f;
