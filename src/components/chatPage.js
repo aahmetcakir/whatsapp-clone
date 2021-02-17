@@ -34,7 +34,22 @@ function ChatPage({ name }) {
       <div className="chatPage_chatScreen">
         <div className="chatPage_chatScreen_messages">
           this is a chat screen
-          <ChatBubble/>
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
+          <ChatBubble />
         </div>
         <div className="chatPage_chatScreen_sendMessageArea">
           <SendMessage />

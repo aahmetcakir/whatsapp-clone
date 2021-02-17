@@ -8,8 +8,10 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
+    "firebase": "^8.2.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-firebase-hooks": "^2.2.0",
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
