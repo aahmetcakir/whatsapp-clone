@@ -1,0 +1,22 @@
+.sidebar_group {
+  overflow: hidden;
+}
+.sidebar_group_scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 900px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #323739;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #8f9394;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555c5f;
+}

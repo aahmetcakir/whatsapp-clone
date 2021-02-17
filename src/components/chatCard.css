@@ -1,0 +1,35 @@
+.chatCard {
+  background-color: #131c21;
+  cursor: pointer;
+  transition: 0.05s all;
+  margin-top: 5px;
+  border-top: #777a7d 1px solid;
+}
+.chatCard:hover {
+  background-color: #323739;
+}
+.chatCard_group {
+  display: flex;
+  align-items: center;
+}
+.chatCard_group_info {
+  display: flex;
+  padding-left: 5px;
+}
+.chatCard_group_info_flex {
+  display: flex;
+  flex-direction: column;
+}
+.chatCard_group_title {
+  color: #c9cacc;
+}
+.chatCard_group_lastMessage {
+  color: #777a7d;
+}
+.chatCard_group_timestamp {
+  align-items: flex-start;
+  color: #777a7d;
+  position: relative;
+  top: -10px;
+  padding-left: 205px;
+}

@@ -5,6 +5,8 @@ import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import Button from "@material-ui/core/Button";
+import SidebarGroup from "./sidebar_group";
+import Notification from "./notification";
 
 function sidebar() {
   const img =
@@ -25,7 +27,11 @@ function sidebar() {
           </Button>
         </div>
       </div>
-      <div className="sidebar_grubs">this is a group</div>
+      <div className="sidebar_grubs">
+        <Notification/>
+        these are  groups
+        <SidebarGroup/>
+        </div>
     </div>
   );
 }
