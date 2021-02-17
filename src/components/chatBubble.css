@@ -1,0 +1,23 @@
+.chatBubble {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.chatBubble_info {
+  display: flex;
+  background-color: #056162;
+  padding: 4px;
+  margin-right: 120px;
+  max-width: 350px;
+}
+.chatBubble_info_timestamp {
+  align-self: flex-end;
+  color: rgb(216, 211, 211);
+  font-size: 11px;
+  position: relative;
+  padding: 2px;
+}
+.chatBubble_info_text {
+  padding: 10px;
+  font-size: 16px;
+}

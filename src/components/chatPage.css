@@ -13,10 +13,12 @@
   flex-direction: column;
 }
 .chatPage_chatScreen_messages {
-  flex: .99;
+  flex: 0.99;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-.chatPage_chatScreen_sendMessageArea{
-  flex: .01;
+.chatPage_chatScreen_sendMessageArea {
+  flex: 0.01;
 }
 .chatPage_chatTitle_info {
   display: flex;

@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
 import "./chatPage.css";
 import SendMessage from "./sendMessage";
+import ChatBubble from "./chatBubble";
 
 function ChatPage({ name }) {
   const img =
@@ -33,6 +34,7 @@ function ChatPage({ name }) {
       <div className="chatPage_chatScreen">
         <div className="chatPage_chatScreen_messages">
           this is a chat screen
+          <ChatBubble/>
         </div>
         <div className="chatPage_chatScreen_sendMessageArea">
           <SendMessage />
