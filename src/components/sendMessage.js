@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined";
 import AttachFileOutlinedIcon from "@material-ui/icons/AttachFileOutlined";
 import MicIcon from "@material-ui/icons/Mic";
 import "./sendMessage.css";
 function SendMessage() {
   const size = "30px";
+
   return (
     <div className="sendMessage">
       <EmojiEmotionsOutlinedIcon

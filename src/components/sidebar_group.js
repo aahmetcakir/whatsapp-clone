@@ -1,33 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ChatCard from "./chatCard";
 import "./sidebarGroup.css";
-
+import db from "./firebase";
 function SidebarGroup() {
+  const [rooms, setrooms] = useState([]);
+  useEffect(() => {
+    db.collection("rooms").onSnapshot((snopshot) =>
+      setrooms(
+        snopshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      )
+    );
+  }, []);
+  console.log(rooms);
   return (
     <div className="sidebar_group">
       <div className="sidebar_group_scroll">
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
-          <ChatCard/>
+        {/* {rooms.map((room) => {
+          <ChatCard key={room.id} name={room.data.name} />;
+        })} */}
+        <ChatCard name={rooms[0].data.name} />
       </div>
     </div>
   );

@@ -6,10 +6,12 @@ import IconButton from "@material-ui/core/IconButton";
 import "./chatPage.css";
 import SendMessage from "./sendMessage";
 import ChatBubble from "./chatBubble";
+import ChatBubbleReply from "./chatBubbleReply";
 
 function ChatPage({ name }) {
   const img =
     "https://avatars.githubusercontent.com/u/51996326?s=460&u=1a97a750118dd660bbc765424688e279bb3dc6d7&v=4";
+
   return (
     <div className="chatPage">
       <div className="chatPage_chatTitle">
@@ -33,23 +35,14 @@ function ChatPage({ name }) {
       </div>
       <div className="chatPage_chatScreen">
         <div className="chatPage_chatScreen_messages">
-          this is a chat screen
           <ChatBubble />
+          <ChatBubbleReply />
           <ChatBubble />
+          <ChatBubbleReply />
           <ChatBubble />
+          <ChatBubbleReply />
           <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
-          <ChatBubble />
+          <ChatBubbleReply />
         </div>
         <div className="chatPage_chatScreen_sendMessageArea">
           <SendMessage />
