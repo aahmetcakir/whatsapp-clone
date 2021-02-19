@@ -18,10 +18,9 @@ function SidebarGroup() {
   return (
     <div className="sidebar_group">
       <div className="sidebar_group_scroll">
-        {/* {rooms.map((room) => {
-          <ChatCard key={room.id} name={room.data.name} />;
-        })} */}
-        <ChatCard name={rooms[0].data.name} />
+        {rooms.map((room) => {
+          return <ChatCard key={room.id} name={room.data.name} />;
+        })}
       </div>
     </div>
   );
