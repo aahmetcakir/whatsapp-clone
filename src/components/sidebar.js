@@ -8,14 +8,14 @@ import IconButton from "@material-ui/core/IconButton";
 import SidebarGroup from "./sidebar_group";
 import Notification from "./notification";
 import SearchBar from "./searchBar";
+import { useStateValue } from "../StateProvider";
 
-function sidebar() {
-  const img =
-    "https://avatars.githubusercontent.com/u/51996326?s=460&u=1a97a750118dd660bbc765424688e279bb3dc6d7&v=4";
+function Sidebar({ rooms }) {
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="sidebar">
       <div className="sidebar_title">
-        <Avatar src={img} />
+        <Avatar src={user?.photoURL} />
         <div className="sidebar_title_icons">
           <IconButton>
             <DonutLargeIcon className="sidebar_title_icons_icon" />
@@ -31,10 +31,10 @@ function sidebar() {
       <div className="sidebar_grubs">
         <Notification />
         <SearchBar />
-        <SidebarGroup />
+        <SidebarGroup rooms={rooms} />
       </div>
     </div>
   );
 }
 
-export default sidebar;
+export default Sidebar;

@@ -5,6 +5,9 @@
   margin-top: 5px;
   border-top: #777a7d 1px solid;
 }
+.chatcard_link{
+  text-decoration: none;
+}
 .chatCard:hover {
   background-color: #323739;
 }
