@@ -5,16 +5,21 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
 import "./chatPage.css";
+import firebase from "firebase";
 
 import SendMessage from "./sendMessage";
 import ChatBubble from "./chatBubble";
 import ChatBubbleReply from "./chatBubbleReply";
 import db from "./firebase";
+import { useStateValue } from "../StateProvider";
 function ChatPage() {
   const img = "https://avatars.dicebear.com/api/male/5646.svg";
   const [roomName, setroomName] = useState("");
   const [messages, setmessages] = useState([]);
+  const [userMessage, setUsermessages] = useState("");
   const { roomId } = useParams();
+  const [{ user }, dispatch] = useStateValue();
+
   useEffect(() => {
     if (roomId) {
       db.collection("rooms")
@@ -26,16 +31,20 @@ function ChatPage() {
         .doc(roomId)
         .collection("messages")
         .orderBy("timestamp", "asc")
-        .onSnapshot((snapshot) =>
-          setmessages(
-            snapshot.docs.map((doc) => {
-              doc.data();
-            })
-          )
-        );
+        .onSnapshot((snapshot) => {
+          setmessages(snapshot.docs.map((doc) => doc.data()));
+        });
     }
   }, [roomId]);
-  console.log(messages);
+  const sendMessageDB = (e) => {
+    e.preventDefault();
+    db.collection("rooms").doc(roomId).collection("messages").add({
+      message: userMessage,
+      name: user.displayName,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    setUsermessages("");
+  };
   return (
     <div className="chatPage">
       <div className="chatPage_chatTitle">
@@ -59,18 +68,30 @@ function ChatPage() {
       </div>
       <div className="chatPage_chatScreen">
         <div className="chatPage_chatScreen_messages">
-          {messages.map((message) => {
+          {messages.map((msg) => {
             return (
               <ChatBubble
-                key={message.timesamp}
-                time={message.timesamp}
-                msg={message.message}
+                key={msg.timestamp}
+                time={msg.timestamp}
+                msg={msg.message}
               />
             );
           })}
         </div>
         <div className="chatPage_chatScreen_sendMessageArea">
-          <SendMessage />
+          <SendMessage
+            input={
+              <form onSubmit={sendMessageDB} className="sendMessage_form">
+                <input
+                  className="sendMessage_input"
+                  type="text"
+                  placeholder="Bir mesaj yazın"
+                  value={userMessage}
+                  onChange={(e) => setUsermessages(e.target.value)}
+                />
+              </form>
+            }
+          />
         </div>
       </div>
     </div>

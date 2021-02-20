@@ -3,7 +3,7 @@ import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined"
 import AttachFileOutlinedIcon from "@material-ui/icons/AttachFileOutlined";
 import MicIcon from "@material-ui/icons/Mic";
 import "./sendMessage.css";
-function SendMessage() {
+function SendMessage({ input }) {
   const size = "30px";
 
   return (
@@ -16,11 +16,7 @@ function SendMessage() {
         style={{ height: size, width: size }}
         className="sendMessage_icon_rotate"
       />
-      <input
-        className="sendMessage_input"
-        type="text"
-        placeholder="Bir mesaj yazın"
-      />
+      {input}
       <MicIcon
         style={{ height: size, width: size }}
         className="sendMessage_icon"

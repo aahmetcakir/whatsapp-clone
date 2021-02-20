@@ -19,14 +19,19 @@
 }
 .sendMessage_input {
   background-color: #33383b;
-  width: 100%;
-  margin-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-radius: 30px;
+  width: 98%;
   outline: none;
   border: none;
   text-indent: 15px;
   font-size: 14px;
+  color: #dde2e6;
+}
+.sendMessage_form {
+  background-color: #33383b;
+  margin-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 30px;
+  width: 100%;
   color: #dde2e6;
 }

@@ -5,7 +5,7 @@ function ChatBubble({ msg ,time}) {
     <div className="chatBubble">
       <div className="chatBubble_info">
         <span className="chatBubble_info_text">{msg}</span>
-        <span className="chatBubble_info_timestamp">{time}</span>
+        <span className="chatBubble_info_timestamp">{new Date(time?.toDate()).toUTCString()}</span>
       </div>
     </div>
   );
