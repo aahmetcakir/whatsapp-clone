@@ -74,6 +74,7 @@ function ChatPage() {
                 key={msg.timestamp}
                 time={msg.timestamp}
                 msg={msg.message}
+                name={user.displayName}
               />
             );
           })}

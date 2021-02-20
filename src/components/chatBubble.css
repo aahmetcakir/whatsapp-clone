@@ -13,6 +13,13 @@
   margin-right: 90px;
   max-width: 350px;
 }
+.chatBubble_info_name {
+  align-self: flex-end;
+  color: rgb(255, 255, 255);
+  font-size: 11px;
+  position: relative;
+  padding: 2px;
+}
 .chatBubble_info_timestamp {
   align-self: flex-end;
   color: rgb(216, 211, 211);
