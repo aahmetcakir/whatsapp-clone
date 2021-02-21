@@ -10,7 +10,7 @@ import firebase from "firebase";
 import SendMessage from "./sendMessage";
 import ChatBubble from "./chatBubble";
 import ChatBubbleReply from "./chatBubbleReply";
-import db from "./firebase";
+import db, { auth } from "./firebase";
 import { useStateValue } from "../StateProvider";
 function ChatPage() {
   const img = "https://avatars.dicebear.com/api/male/5646.svg";
@@ -19,7 +19,9 @@ function ChatPage() {
   const [userMessage, setUsermessages] = useState("");
   const { roomId } = useParams();
   const [{ user }, dispatch] = useStateValue();
-
+  const currentUser = auth.currentUser;
+  console.log(currentUser.email);
+  console.log(user.email);
   useEffect(() => {
     if (roomId) {
       db.collection("rooms")
@@ -41,6 +43,7 @@ function ChatPage() {
     db.collection("rooms").doc(roomId).collection("messages").add({
       message: userMessage,
       name: user.displayName,
+      email: user.email,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setUsermessages("");
@@ -53,7 +56,10 @@ function ChatPage() {
           <div className="chatPage_chatTitle_name">
             {roomName} <br />
             <div className="chatPage_chatTitle_name_users">
-              Siz, Umutcan, Berkay, Muhammet
+              {/*
+              TODO
+               buraya kullanıcı isimleri gelecek
+               */}
             </div>
           </div>
         </div>
@@ -69,8 +75,15 @@ function ChatPage() {
       <div className="chatPage_chatScreen">
         <div className="chatPage_chatScreen_messages">
           {messages.map((msg) => {
-            return (
+            return currentUser.email == msg.email ? (
               <ChatBubble
+                key={msg.timestamp}
+                time={msg.timestamp}
+                msg={msg.message}
+                name={msg.name}
+              />
+            ) : (
+              <ChatBubbleReply
                 key={msg.timestamp}
                 time={msg.timestamp}
                 msg={msg.message}

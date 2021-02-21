@@ -1,13 +1,14 @@
 import React from "react";
-import "./chatBubbleReply.css"
-function ChatBubbleReply() {
+import "./chatBubbleReply.css";
+function ChatBubbleReply({ msg, time, name }) {
   return (
     <div className="chatReply">
       <div className="chatReply_info">
-        <span className="chatReply_info_text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab animi
+        <span className="chatReply_info_text">{msg}</span>
+        <span className="chatReply_info_timestamp">
+          {" "}
+          {new Date(time?.toDate()).toLocaleDateString("en-US")}
         </span>
-        <span className="chatReply_info_timestamp">12.55</span>
       </div>
     </div>
   );
