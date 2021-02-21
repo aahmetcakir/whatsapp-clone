@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import Avatar from "./avatar";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -14,6 +14,11 @@ import db, { auth } from "./firebase";
 import { useStateValue } from "../StateProvider";
 function ChatPage() {
   const img = "https://avatars.dicebear.com/api/male/5646.svg";
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const [roomName, setroomName] = useState("");
   const [messages, setmessages] = useState([]);
   const [userMessage, setUsermessages] = useState("");
@@ -22,6 +27,9 @@ function ChatPage() {
   const currentUser = auth.currentUser;
   console.log(currentUser.email);
   console.log(user.email);
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, userMessage, roomId]);
   useEffect(() => {
     if (roomId) {
       db.collection("rooms")
@@ -91,6 +99,7 @@ function ChatPage() {
               />
             );
           })}
+          <div ref={messagesEndRef} />
         </div>
         <div className="chatPage_chatScreen_sendMessageArea">
           <SendMessage
