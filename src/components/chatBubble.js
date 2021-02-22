@@ -7,7 +7,7 @@ function ChatBubble({ msg, time, name }) {
       <div className="chatBubble_info">
         <span className="chatBubble_info_text">{msg}</span>
         <span className="chatBubble_info_timestamp">
-          {new Date(time?.toDate()).toLocaleDateString("en-US", options)}
+          {new Date(time?.toDate()).toLocaleDateString("tr-TR", options)}
         </span>
         <span className="chatBubble_info_name">{name}</span>
       </div>

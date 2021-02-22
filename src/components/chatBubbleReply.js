@@ -9,7 +9,7 @@ function ChatBubbleReply({ msg, time, name }) {
         <span className="chatReply_info_text">{msg}</span>
         <span className="chatReply_info_timestamp">
           {" "}
-          {new Date(time?.toDate()).toLocaleDateString("en-US", options)}
+          {new Date(time?.toDate()).toLocaleDateString("tr-TR", options)}
         </span>
       </div>
     </div>
