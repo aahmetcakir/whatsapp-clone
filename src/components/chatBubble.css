@@ -5,19 +5,19 @@
   margin-top: 10px;
 }
 .chatBubble_info {
-  display: flex;
   border-radius: 6px;
-
-  background-color: #056162;
+  background-color: #045052;
   padding: 4px;
   margin-right: 90px;
   max-width: 350px;
 }
+.chatReply_info_text_and_date {
+  display: flex;
+}
 .chatBubble_info_name {
-  align-self: flex-end;
-  color: rgb(255, 255, 255);
-  font-size: 11px;
-  position: relative;
+  color: rgb(255, 166, 0);
+  font-size: 16px;
+  margin-left: 8px;
   padding: 2px;
 }
 .chatBubble_info_timestamp {
@@ -30,4 +30,5 @@
 .chatBubble_info_text {
   padding: 10px;
   font-size: 16px;
+  color: rgb(255, 255, 255);
 }

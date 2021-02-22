@@ -5,5 +5,6 @@
   height: 100vh;
   box-sizing: border-box;
   list-style-type: none;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

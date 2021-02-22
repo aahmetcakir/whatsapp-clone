@@ -4,8 +4,10 @@
   transition: 0.05s all;
   margin-top: 5px;
   border-top: #777a7d 1px solid;
+  display: flex;
+  justify-content: space-between;
 }
-.chatcard_link{
+.chatcard_link {
   text-decoration: none;
 }
 .chatCard:hover {
@@ -17,7 +19,9 @@
 }
 .chatCard_group_info {
   display: flex;
+  justify-content: space-around;
   padding-left: 5px;
+  position: relative;
 }
 .chatCard_group_info_flex {
   display: flex;
@@ -27,12 +31,21 @@
   color: #c9cacc;
 }
 .chatCard_group_lastMessage {
+  display: flex;
   color: #777a7d;
+}
+.chatCard_group_lastMessage_name {
+  color: #777a7d;
+  margin-right: 4px;
+}
+.chatCard_group_lastMessage_message {
+  color: #777a7d;
+  margin-left: 4px;
 }
 .chatCard_group_timestamp {
   align-items: flex-start;
   color: #777a7d;
   position: relative;
-  top: -10px;
-  padding-left: 205px;
+  top: 10px;
+  left: -10px;
 }

@@ -1,18 +1,20 @@
 .layout{
     display: flex;
     max-width: 1400px;
-    max-height: 980px;
-    margin: 0 auto;
+    max-height: 930px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .layout_sidebar{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
     border-right: 1px solid #3f4448;
     flex: .30;
     background-color: #131c21;
 }
 .layout_chat{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     flex: .70;
 }

@@ -18,15 +18,13 @@ function ChatPage() {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
+  let names = [];
   const [roomName, setroomName] = useState("");
   const [messages, setmessages] = useState([]);
   const [userMessage, setUsermessages] = useState("");
   const { roomId } = useParams();
   const [{ user }, dispatch] = useStateValue();
   const currentUser = auth.currentUser;
-  console.log(currentUser.email);
-  console.log(user.email);
   useEffect(() => {
     scrollToBottom();
   }, [messages, roomId]);
@@ -64,10 +62,12 @@ function ChatPage() {
           <div className="chatPage_chatTitle_name">
             {roomName} <br />
             <div className="chatPage_chatTitle_name_users">
-              {/*
-              TODO
-               buraya kullanıcı isimleri gelecek
-               */}
+              {messages.map((msg) => {
+                names.push(msg.name);
+              })}
+              {[...new Set(names)].map((name) => {
+                return <p className="gruopUserNames">{name}, </p>;
+              })}
             </div>
           </div>
         </div>

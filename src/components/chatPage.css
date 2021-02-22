@@ -30,11 +30,21 @@
   background-color: #2a2f32;
   justify-content: space-between;
 }
+
 .chatPage_chatTitle_name {
   color: #c9cacc;
+  position: relative;
+  top: 10px;
 }
 .chatPage_chatTitle_name_users {
   color: #777a7d;
+  display: flex;
+  position: relative;
+  top: -10px;
+  align-items: center;
+}
+.gruopUserNames {
+  margin-right: 4px;
 }
 .chatPage_chatTitle_icons {
   display: flex;
