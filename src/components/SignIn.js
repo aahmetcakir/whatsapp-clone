@@ -24,7 +24,7 @@ function SignIn() {
   return (
     <div className="signIn">
       <div className="signIn_icon"></div>
-      <Button style={{ color: "white" }} onClick={signInGoogle}>
+      <Button style={{ color: "white" , backgroundColor : "red"}} onClick={signInGoogle}>
         Giriş yap
       </Button>
     </div>
