@@ -18,7 +18,7 @@
   transform: rotate(45deg);
 }
 .sendMessage_input {
-  background-color: #33383b;
+  background-color: transparent;
   width: 98%;
   outline: none;
   border: none;

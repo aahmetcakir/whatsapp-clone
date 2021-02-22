@@ -12,6 +12,12 @@
   margin-left: 60px;
   max-width: 350px;
 }
+.chatReply_info_name {
+  color: rgb(255, 254, 254);
+  font-size: 11px;
+  position: relative;
+  padding: 2px;
+}
 .chatReply_info_timestamp {
   align-self: flex-end;
   color: rgb(216, 211, 211);
