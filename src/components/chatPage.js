@@ -29,7 +29,7 @@ function ChatPage() {
   console.log(user.email);
   useEffect(() => {
     scrollToBottom();
-  }, [messages, userMessage, roomId]);
+  }, [messages, roomId]);
   useEffect(() => {
     if (roomId) {
       db.collection("rooms")
