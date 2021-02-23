@@ -13,6 +13,7 @@
 }
 .chatReply_info_text_and_date {
   display: flex;
+  max-width: 350px;
 }
 .chatReply_info_name {
   color: rgb(0, 255, 221);
@@ -30,4 +31,5 @@
 .chatReply_info_text {
   padding: 10px;
   font-size: 16px;
+  word-break: break-all;
 }
