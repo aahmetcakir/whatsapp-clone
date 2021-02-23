@@ -5,10 +5,11 @@ import "firebase/auth";
 import { Button } from "@material-ui/core";
 import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
+import "./signIn.css";
 
 const auth = firebase.auth();
 function SignIn() {
-  const [{user}, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const signInGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth
@@ -23,10 +24,14 @@ function SignIn() {
   };
   return (
     <div className="signIn">
-      <div className="signIn_icon"></div>
-      <Button style={{ color: "white" , backgroundColor : "red"}} onClick={signInGoogle}>
-        Giriş yap
-      </Button>
+      <div className="signIn_card">
+        <div className="signIn_card_content">
+          <h2 className="signIn_card_title">WhatsApp'a giriş yap</h2>
+          <button className="signIn_card_btn" onClick={signInGoogle}>
+            Google ile giriş yap
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
