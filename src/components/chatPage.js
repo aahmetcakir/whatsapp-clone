@@ -13,12 +13,12 @@ import ChatBubbleReply from "./chatBubbleReply";
 import db, { auth } from "./firebase";
 import { useStateValue } from "../StateProvider";
 function ChatPage() {
-  const img = "https://avatars.dicebear.com/api/male/5646.svg";
+  const img = "https://avatars.dicebear.com/api/male/1903.svg";
   const messagesEndRef = useRef(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-  let names = [];
+  const names = [];
   const [roomName, setroomName] = useState("");
   const [messages, setmessages] = useState([]);
   const [userMessage, setUsermessages] = useState("");
@@ -46,13 +46,20 @@ function ChatPage() {
   }, [roomId]);
   const sendMessageDB = (e) => {
     e.preventDefault();
-    db.collection("rooms").doc(roomId).collection("messages").add({
-      message: userMessage,
-      name: user.displayName,
-      email: user.email,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
-    setUsermessages("");
+    if (
+      userMessage !== "" &&
+      userMessage !== " " &&
+      userMessage !== "  " &&
+      userMessage !== "   "
+    ) {
+      db.collection("rooms").doc(roomId).collection("messages").add({
+        message: userMessage,
+        name: user.displayName,
+        email: user.email,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+      setUsermessages("");
+    }
   };
   return (
     <div className="chatPage">

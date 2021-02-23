@@ -36,9 +36,9 @@ function ChatCard({ RoomName, id }) {
                 </div>
                 <div className="chatCard_group_lastMessage_message">
                   {message[message.length - 1] &&
-                    message[message.length - 1].split(" ", 2).join(" ")}
+                    message[message.length - 1].split("", 7).join("")}
                   {message[message.length - 1] &&
-                  message[message.length - 1].split(" ").length >= 3
+                  message[message.length - 1].split("").length >= 7
                     ? " ..."
                     : ""}
                 </div>

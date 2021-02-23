@@ -10,9 +10,11 @@
   padding: 4px;
   margin-right: 90px;
   max-width: 350px;
+
 }
 .chatReply_info_text_and_date {
   display: flex;
+  max-width: 350px;
 }
 .chatBubble_info_name {
   color: rgb(255, 166, 0);
@@ -31,4 +33,5 @@
   padding: 10px;
   font-size: 16px;
   color: rgb(255, 255, 255);
+  word-break: break-all;
 }

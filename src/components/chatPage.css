@@ -4,8 +4,8 @@
   color: white;
 }
 .chatPage_chatScreen {
-  background-image: url("https://whatsappbrand.com/wp-content/themes/whatsapp-brc/images/hero.png");
-  /* background-image: url("../bg.png"); */
+  /* background-image: url("https://whatsappbrand.com/wp-content/themes/whatsapp-brc/images/hero.png"); */
+  background-image: url("../bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #0d1418;

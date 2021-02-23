@@ -9,6 +9,7 @@ import { useStateValue } from "../StateProvider";
 
 function Layout() {
   const [rooms, setrooms] = useState([]);
+  
   useEffect(() => {
     const unsubscribe = db.collection("rooms").onSnapshot((snopshot) =>
       setrooms(
