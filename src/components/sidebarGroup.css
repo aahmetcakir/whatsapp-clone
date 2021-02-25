@@ -1,5 +1,6 @@
 .sidebar_group {
   overflow: hidden;
+  height: 100%;
 }
 .sidebar_group_scroll {
   overflow-y: scroll;

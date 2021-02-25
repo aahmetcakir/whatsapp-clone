@@ -17,7 +17,7 @@ function Sidebar({ rooms }) {
       <div className="sidebar_title">
         <div className="sidebar_title_info">
           <Avatar src={user?.photoURL} />
-          <h3 style={{ color: "#8f9394" }}>{user?.displayName}</h3>
+          <h3 className="sidebar_title_info_name">{user?.displayName}</h3>
         </div>
         <div className="sidebar_title_icons">
           <IconButton>

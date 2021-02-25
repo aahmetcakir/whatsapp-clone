@@ -46,3 +46,27 @@
   top: 3px;
   left: 5px;
 }
+@media only screen and (max-width: 768px) {
+  .notification_text {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .notification_texts_p {
+    font-size: 10px;
+  }
+  .notification {
+    padding: 10px 8px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .chatPage_chatTitle_name_users {
+    font-size: 12px;
+    flex-flow: row wrap;
+  }
+  .notification_texts_p {
+    font-size: 10px;
+  }
+  .notification {
+    padding: 10px 8px;
+  }
+}

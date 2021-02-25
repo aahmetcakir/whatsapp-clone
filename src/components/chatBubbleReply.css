@@ -24,7 +24,7 @@
 .chatReply_info_timestamp {
   align-self: flex-end;
   color: rgb(216, 211, 211);
-  font-size: 11px;
+  font-size: 10px;
   position: relative;
   padding: 2px;
 }
@@ -32,4 +32,36 @@
   padding: 10px;
   font-size: 16px;
   word-break: break-all;
+}
+@media only screen and (max-width: 570px) {
+  .chatReply_info {
+    max-width: 220px;
+  }
+  .chatReply_info_name {
+    font-size: 14px;
+  }
+  .chatReply_info_text {
+    font-size: 14px;
+  }
+  .chatReply_info_timestamp {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .chatReply_info {
+    margin-left: 5px;
+    max-width: 280px;
+  }
+  .chatReply_info_name {
+    font-size: 14px;
+  }
+  .chatReply_info_text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .chatReply_info {
+    margin-left: 30px;
+    max-width: 280px;
+  }
 }

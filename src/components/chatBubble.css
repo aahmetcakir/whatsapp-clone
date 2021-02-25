@@ -10,7 +10,6 @@
   padding: 4px;
   margin-right: 90px;
   max-width: 350px;
-
 }
 .chatReply_info_text_and_date {
   display: flex;
@@ -34,4 +33,30 @@
   font-size: 16px;
   color: rgb(255, 255, 255);
   word-break: break-all;
+}
+@media only screen and (max-width: 570px) {
+  .chatBubble_info {
+    max-width: 220px;
+  }
+  .chatBubble_info_name {
+    font-size: 14px;
+  }
+  .chatBubble_info_text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .chatBubble_info {
+    margin-right: 5px;
+    max-width: 280px;
+  }
+  .chatBubble_info_name {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .chatBubble_info {
+    margin-right: 30px;
+    max-width: 280px;
+  }
 }

@@ -49,3 +49,19 @@
   top: 10px;
   left: -10px;
 }
+@media only screen and (max-width: 992px) {
+  .chatCard_group_lastMessage {
+    font-size: 14px;
+  }
+  .chatCard_group_timestamp {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 781px) {
+  .chatCard_group_lastMessage {
+    font-size: 12px;
+  }
+  .chatCard_group_title{
+    font-size: 14px;
+  }
+}

@@ -1,25 +1,26 @@
 .chatPage {
-  background-color: #2a2f32;
-  height: 93%;
   color: white;
+  height: 100%;
 }
 .chatPage_chatScreen {
   background-image: url("https://whatsappbrand.com/wp-content/themes/whatsapp-brc/images/hero.png");
   /* background-image: url("../bg.png"); */
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #0d1418;
-  height: 100%;
   display: flex;
+  height: 100%;
   flex-direction: column;
 }
 .chatPage_chatScreen_messages {
   flex: 0.99;
   overflow-y: scroll;
   overflow-x: hidden;
+  margin-bottom: 64px;
 }
 .chatPage_chatScreen_sendMessageArea {
   flex: 0.01;
+  position: relative;
+  top: -60px;
 }
 .chatPage_chatTitle_info {
   display: flex;
@@ -37,14 +38,15 @@
   top: 10px;
 }
 .chatPage_chatTitle_name_users {
-  color: #777a7d;
+  color: #a5a7a8;
   display: flex;
   position: relative;
   top: -10px;
-  align-items: center;
+  font-size: 14px;
 }
 .gruopUserNames {
   margin-right: 4px;
+  font-size: 12px;
 }
 .chatPage_chatTitle_icons {
   display: flex;
@@ -59,4 +61,18 @@
 .button {
   border-radius: 50%;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .chatPage_chatTitle_name_users {
+    font-size: 10px;
+    flex-flow: row wrap;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .chatPage_chatTitle_name_users {
+    font-size: 12px;
+    flex-flow: row wrap;
+  }
 }

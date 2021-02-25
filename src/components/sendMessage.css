@@ -1,10 +1,18 @@
+.sendMessage_form {
+  background-color: #33383b;
+  margin-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 30px;
+  width: 100%;
+  color: #dde2e6;
+  position: relative;
+}
 .sendMessage {
   display: flex;
   align-items: center;
   padding: 10px 14px 10px 14px;
   background-color: #1e2428;
-  position: relative;
-  top: 8px;
 }
 .sendMessage_icon {
   color: #828689;
@@ -24,14 +32,5 @@
   border: none;
   text-indent: 15px;
   font-size: 14px;
-  color: #dde2e6;
-}
-.sendMessage_form {
-  background-color: #33383b;
-  margin-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-radius: 30px;
-  width: 100%;
   color: #dde2e6;
 }

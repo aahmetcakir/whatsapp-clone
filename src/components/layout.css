@@ -1,20 +1,35 @@
-.layout{
-    display: flex;
-    max-width: 1400px;
-    max-height: 930px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+.layout {
+  display: flex;
+  max-width: 1400px;
+  max-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-.layout_sidebar{
-    margin-top: 10px;
-    border-right: 1px solid #3f4448;
-    flex: .30;
-    background-color: #131c21;
+.layout_sidebar {
+  border-right: 1px solid #3f4448;
+  flex: 0.3;
+  height: 100vh;
+  background-color: #131c21;
 }
-.layout_chat{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    flex: .70;
+.layout_chat {
+  height: 100vh;
+  flex: 0.7;
+}
+@media only screen and (max-width: 1200px) {
+  .layout_sidebar {
+    flex: 0.35;
+  }
+  .layout_chat {
+    flex: 0.65;
+  }
+}
+@media only screen and (max-width: 888px) {
+  .layout_sidebar {
+    flex: 0.45;
+  }
+  .layout_chat {
+    flex: 0.55;
+  }
 }
