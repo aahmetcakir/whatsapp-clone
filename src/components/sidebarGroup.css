@@ -1,9 +1,9 @@
 .sidebar_group {
-  overflow: hidden;
-  height: 100%;
+  overflow-y: scroll;
+  max-height: 480px;
 }
 .sidebar_group_scroll {
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {

@@ -66,16 +66,16 @@ function ChatPage() {
       <div className="chatPage_chatTitle">
         <div className="chatPage_chatTitle_info">
           <Avatar src={img} />
-          <div className="chatPage_chatTitle_name">
-            {roomName} <br />
-            <div className="chatPage_chatTitle_name_users">
+          <div>
+            <div className="chatPage_chatTitle_name">{roomName}</div>
+            <p className="chatPage_chatTitle_name_users">
               {messages.map((msg) => {
                 names.push(msg.name);
               })}
               {[...new Set(names)].map((name) => {
                 return <p className="gruopUserNames">{name}, </p>;
               })}
-            </div>
+            </p>
           </div>
         </div>
         <div className="chatPage_chatTitle_icons">

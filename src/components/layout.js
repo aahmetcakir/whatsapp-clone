@@ -3,7 +3,7 @@ import Sidebar from "./sidebar";
 import ChatPage from "./chatPage";
 import "./layout.css";
 import db from "./firebase";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import SignIn from "./SignIn";
 import { useStateValue } from "../StateProvider";
 

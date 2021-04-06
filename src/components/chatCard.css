@@ -61,7 +61,12 @@
   .chatCard_group_lastMessage {
     font-size: 12px;
   }
-  .chatCard_group_title{
+  .chatCard_group_title {
     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .chatCard_group_timestamp {
+    display: none;
   }
 }

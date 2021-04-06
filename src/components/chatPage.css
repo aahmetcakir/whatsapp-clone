@@ -35,18 +35,26 @@
 .chatPage_chatTitle_name {
   color: #c9cacc;
   position: relative;
-  top: 10px;
+  margin-bottom: 8px;
 }
+
 .chatPage_chatTitle_name_users {
   color: #a5a7a8;
   display: flex;
   position: relative;
+  white-space: nowrap;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   top: -10px;
   font-size: 14px;
 }
 .gruopUserNames {
+  margin-top: 4px;
   margin-right: 4px;
   font-size: 12px;
+  display: flex;
+  flex-wrap: unset;
 }
 .chatPage_chatTitle_icons {
   display: flex;
@@ -73,6 +81,10 @@
 @media only screen and (max-width: 992px) {
   .chatPage_chatTitle_name_users {
     font-size: 12px;
-    flex-flow: row wrap;
+    max-width: 100px;
+    flex-flow: nowrap;
+  }
+  .chatPage_chatTitle_name {
+    font-size: 14px;
   }
 }
