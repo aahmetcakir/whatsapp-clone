@@ -4,20 +4,25 @@ import Avatar from "./avatar";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
-import "./chatPage.css";
 import firebase from "firebase";
+
+import "./chatPage.css";
 
 import SendMessage from "./sendMessage";
 import ChatBubble from "./chatBubble";
 import ChatBubbleReply from "./chatBubbleReply";
+
 import db, { auth } from "./firebase";
+
 import { useStateValue } from "../StateProvider";
+
 function ChatPage() {
   const img = "https://avatars.dicebear.com/api/male/1903.svg";
   const messagesEndRef = useRef(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   const names = [];
   const [roomName, setroomName] = useState("");
   const [messages, setmessages] = useState([]);
@@ -28,6 +33,7 @@ function ChatPage() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, roomId]);
+
   useEffect(() => {
     if (roomId) {
       db.collection("rooms")
@@ -47,10 +53,7 @@ function ChatPage() {
   const sendMessageDB = (e) => {
     e.preventDefault();
     if (
-      userMessage !== "" &&
-      userMessage !== " " &&
-      userMessage !== "  " &&
-      userMessage !== "   "
+      userMessage.lenght>0
     ) {
       db.collection("rooms").doc(roomId).collection("messages").add({
         message: userMessage,
